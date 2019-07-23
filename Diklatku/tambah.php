@@ -1,0 +1,117 @@
+		
+		<p> <a href="../index.php">Beranda</a> </p>
+		
+		<h3>Tambah Data Diklat</h3>
+	
+	<form method="post" action="simpan_data.php">
+		<table cellpadding="9" cellspacing="0" border="1">
+			<!-- <tr>
+				<td>ID Pegawai</td>
+				<td>:</td>
+				<td> <input type="text" name="id_pegawai" required/> </td>
+			</tr> -->
+		<tr>
+			<td>ID Pelatihan</td>
+			<td>:</td>
+			<td> <input type="text" name="id_pelatihan" required/> </td>
+		</tr>
+		<tr>
+			<td>Bidang</td>
+			<td>:</td>
+			<td> <select name="bidang" required>
+					<option value="">Pilih Bidang</option>
+					<option value="TIDAK ADA">BELUM MENGIKUTI</option>
+					<option value="SDM">SDM</option>
+					<option value="HSSE">HSSE</option>
+					<option value="BIRO PERENCANAAN">BIRO PERENCANAAN</option>
+					<option value="CHANGE MANAGEMENT">CHANGE MANAGEMENT</option>
+					<option value="OPERASIONAL">OPERASIONAL</option>
+					<option value="HUMAS">HUMAS</option>
+					<option value="PJUM">PJUM</option>
+					<option value="HCM">HCM</option>
+					<option value="FI">FI</option>
+					<option value="CO">CO</option>
+					<option value="PBJ">PBJ</option>
+					<option value="SPPI">SPPI</option>
+					<option value="SPI">SPI</option>
+					<option value="PM">PM</option>
+					<option value="MARKETING">MARKETING</option>
+					<option value="KEUANGAN">KEUANGAN</option>
+					<option value="SMMR">SMMR</option>
+					<option value="HUKUM / LEGAL">HUKUM / LEGAL</option>
+					<option value="TEKNIK">TEKNIK</option>
+				</select>  
+			</td>
+		</tr>
+		
+		<tr>
+			<td>NIPP</td>
+			<td>:</td>
+			<td> <input type="text" name="nipp" required/> </td>
+		</tr>
+		<tr>
+			<td>Nama Pegawai</td>
+			<td>:</td>
+			<td> <input type="text" name="nama_pegawai" size="40" required/> </td>
+		</tr>
+		<tr>
+			<td>Lokasi Pegawai</td>
+			<td>:</td>
+			<td> <input type="text" name="lokasi_pegawai" size="20" required/> </td>
+		</tr>
+		<tr>
+			<td>Substansi</td>
+			<td>:</td>
+			<td> <input type="text" name="substansi" size="30" required/> </td>
+		</tr>
+		<tr>
+			<td>Kelas Jabatan</td>
+			<td>:</td>
+			<td> <select name="kelas_jabatan" required>
+					<option value="">Pilih Kelas Jabatan</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+				</select>  
+			</td>
+		</tr>
+		<tr>
+			<td>Jenis Kelamin</td>
+			<td>:</td>
+			<td> <select name="jenis_kelamin" required/>
+					<option value="">Pilih Jenis Kelamin</option>
+					<option value="L">L</option>
+					<option value="P">P</option>
+				</select>  
+			</td>
+		</tr>
+		<tr>
+			<td>Durasi</td>
+			<td>:</td>
+			<td> <input type="text" name="durasi" required/> </td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td></td>
+			<td><input type="submit" name="tambah" value="Tambah"/></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
