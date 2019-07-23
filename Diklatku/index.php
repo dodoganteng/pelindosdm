@@ -2,7 +2,6 @@
 <?php  //include file koneksi ke database
 		include ('../koneksi.php');
 
-			$connect=mysqli_connect("localhost","root","","rekapsdm");
 			//query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
 			$query = mysqli_query($connect, "SELECT * FROM diklat ORDER BY ID_PEGAWAI ASC") or die (mysqli_error());
 

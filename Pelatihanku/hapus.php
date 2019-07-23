@@ -12,7 +12,6 @@ if (isset($_GET['id'])) {
 	$id_pelatihan	= $_GET['id'];
 
 	//cek ke database apakah ada data pegawai dengan id_pegawai='$id_pegawai'
-	$connect=mysqli_connect("localhost","root","","rekapsdm");
 	$cek	= mysqli_query($connect, "SELECT * from pelatihan WHERE ID_PELATIHAN='$id_pelatihan'");
 	
 	//jika data pegawai tidak ada

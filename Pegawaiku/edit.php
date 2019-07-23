@@ -7,7 +7,6 @@
 
 	$id_pegawai = $_GET['id'];
 
-	$connect=mysqli_connect("localhost","root","","rekapsdm");
 	$show = mysqli_query($connect, "SELECT * FROM pegawai WHERE ID_PEGAWAI='$id_pegawai'");
 
 	if (mysqli_num_rows($show) == 0) {

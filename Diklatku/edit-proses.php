@@ -19,7 +19,6 @@ if (isset($_POST['Ubah'])) {
     $durasi			= $_POST['durasi'];
     
     //melakukan query dengan perintah UPDATE untuk memasukkan data ke database
-    $connect=mysqli_connect("localhost", "root", "", "rekapsdm");
     $input	= mysqli_query($connect, "UPDATE diklat SET id_pelatihan= '$id_pelatihan', nipp = '$nipp', nama_pegawai = '$nama_pegawai', lokasi_pegawai = '$lokasi_pegawai', substansi = '$substansi', kelas_jabatan = '$kelas_jabatan', jenis_kelamin = '$jenis_kelamin', durasi = '$durasi' WHERE  id_pegawai = '$id_pegawai'") or die(mysqli_error()) or die(mysqli_error($connect));
     var_dump($input);
 
