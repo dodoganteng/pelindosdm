@@ -1,11 +1,11 @@
 <?php  
 //mulai proses tambah data
+include('../koneksi.php');
 
 //cek dahulu, jika tombol simpan di klik
 if (isset($_POST['Ubah'])) {
 	
 	//include atau memasukkan file koneksi ke database
-	include('koneksi.php');
 
 	//jika tombol tambah benar di klik maka lanjut prosesnya
 	$id_pelatihan	= $_POST['id_pelatihan'];

@@ -61,9 +61,8 @@
 		</tr>
 		<?php
 		//include file koneksi ke database
-		include ('koneksi.php');
+		include ('../koneksi.php');
 
-			$connect=mysqli_connect("localhost","root","","rekapsdm");
 			//query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
 			$query = mysqli_query($connect, "SELECT * FROM pelatihan ORDER BY ID_PELATIHAN ASC") or die (mysqli_error());
 

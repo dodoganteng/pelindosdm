@@ -2,7 +2,7 @@
 		
 		<h3>Edit Data Diklat</h3>
 	<?php  
-	include('koneksi.php');
+	include('../koneksi.php');
 
 	$id_pegawai = $_GET['id'];
 

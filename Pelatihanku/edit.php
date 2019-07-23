@@ -3,7 +3,7 @@
 		
 		<h3>Edit Data Pelatihan</h3>
 	<?php  
-	include('koneksi.php');
+	include('../koneksi.php');
 
 	$id_pelatihan = $_GET['id'];
 

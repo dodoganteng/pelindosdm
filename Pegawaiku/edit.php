@@ -3,7 +3,7 @@
 		
 		<h3>Edit Data Pegawai</h3>
 	<?php  
-	include('koneksi.php');
+	include('../koneksi.php');
 
 	$id_pegawai = $_GET['id'];
 

@@ -1,12 +1,12 @@
 <?php  
 //mulai proses tambah data
+include('../koneksi.php');
 
 //cek dahulu, apakah benar URL sudah ada GET id_pegawai -> hapus.php?id=id_pegawai
 if (isset($_GET['id'])) {
 	
 	
 	//include atau memasukkan file koneksi ke database
-	include('koneksi.php');
 
 	//mebuat variabel $id_pegawai bernili dari URL GET id_pegawai -> hapus.php?id_pegawai=id
 	$id_pelatihan	= $_GET['id'];
