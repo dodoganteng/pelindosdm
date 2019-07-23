@@ -1,4 +1,6 @@
-
+<?php
+	include('../koneksi.php');
+	?>
 		<p> <a href="../index.php">Beranda</a> </p>
 		
 		<h3>Tambah Data Pelatihan</h3>
@@ -18,28 +20,16 @@
 		<tr>
 			<td>Bidang</td>
 			<td>:</td>
+			
 			<td> <select name="id_bidang" required>
-					<option value="">Pilih Bidang</option>
-					<option value="B000">BELUM MENGIKUTI</option>
-					<option value="B001">SDM</option>
-					<option value="B002">HSSE</option>
-					<option value="B003">BIRO PERENCANAAN</option>
-					<option value="B004">CHANGE MANAGEMENT</option>
-					<option value="B005">OPERASIONAL</option>
-					<option value="B006">HUMAS</option>
-					<option value="B007">PJUM</option>
-					<option value="B008">HCM</option>
-					<option value="B009">FI</option>
-					<option value="B010">CO</option>
-					<option value="B011">PBJ</option>
-					<option value="B012">SPPI</option>
-					<option value="B013">SPI</option>
-					<option value="B014">PM</option>
-					<option value="B015">MARKETING</option>
-					<option value="B016">KEUANGAN</option>
-					<option value="B017">SMMR</option>
-					<option value="B018">HUKUM / LEGAL</option>
-					<option value="B019">TEKNIK</option>
+			<?php 
+			$bidang = mysqli_query($connect,"SELECT * FROM BIDANG");
+			while($result = mysqli_fetch_assoc($bidang)){
+			?>
+
+				<option value="<?php echo $result["ID_BIDANG"]?>"><?php echo $result["BIDANG"] ?></option>
+					
+					<?php } ?>
 				</select>  
 			</td>
 		</tr>
