@@ -1,18 +1,17 @@
 <?php  
 //mulai proses tambah data
+include('../koneksi.php');
 
 //cek dahulu, apakah benar URL sudah ada GET id_pegawai -> hapus.php?id=id_pegawai
 if (isset($_GET['id'])) {
 	
 	
 	//include atau memasukkan file koneksi ke database
-	include('koneksi.php');
 
 	//mebuat variabel $id_pegawai bernili dari URL GET id_pegawai -> hapus.php?id_pegawai=id
 	$id_pegawai		= $_GET['id'];
 
 	//cek ke database apakah ada data pegawai dengan id_pegawai='$id_pegawai'
-	$connect=mysqli_connect("localhost","root","","rekapsdm");
 	$cek	= mysqli_query($connect, "SELECT nipp from pegawai WHERE ID_PEGAWAI='$id_pegawai'");
 	
 	//jika data pegawai tidak ada

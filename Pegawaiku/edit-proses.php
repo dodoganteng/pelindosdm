@@ -1,11 +1,11 @@
 <?php  
 //mulai proses tambah data
+include('../koneksi.php');
 
 //cek dahulu, jika tombol simpan di klik
 if (isset($_POST['Ubah'])) {
 	
 	//include atau memasukkan file koneksi ke database
-	include('koneksi.php');
 
 	//jika tombol tambah benar di klik maka lanjut prosesnya 
 	$id_pegawai		= $_POST['id_pegawai'];
@@ -17,7 +17,6 @@ if (isset($_POST['Ubah'])) {
 	$jenis_kelamin	= $_POST['jenis_kelamin'];
 	
 	//melakukan query dengan perintah UPDATE untuk memasukkan data ke database
-	$connect=mysqli_connect("localhost","root","","rekapsdm");
 	$input	= mysqli_query($connect, "UPDATE pegawai SET id_pegawai= '$id_pegawai', nipp = '$nipp', nama_pegawai = '$nama_pegawai', lokasi_pegawai = '$lokasi_pegawai', substansi = '$substansi', kelas_jabatan = '$kelas_jabatan', jenis_kelamin = '$jenis_kelamin' WHERE  id_pegawai = '$id_pegawai'") or die (mysqli_error($connect));
 	var_dump($input);
 	//jika query input sukses

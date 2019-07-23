@@ -3,11 +3,10 @@
 		
 		<h3>Edit Data Pelatihan</h3>
 	<?php  
-	include('koneksi.php');
+	include('../koneksi.php');
 
 	$id_pelatihan = $_GET['id'];
 
-	$connect=mysqli_connect("localhost","root","","rekapsdm");
 	$show = mysqli_query($connect, "SELECT * FROM pelatihan WHERE ID_PELATIHAN='$id_pelatihan'");
 
 	if (mysqli_num_rows($show) == 0) {
