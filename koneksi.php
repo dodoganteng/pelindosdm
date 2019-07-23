@@ -1,7 +1,7 @@
 <?php // Ganti sama punyamu bro,
 $server		= "localhost";
 $username	= "root";
-$password	= "test";
+$password	= "";
 $name	= "rekapsdm";
 
 $connect	= mysqli_connect($server, $username, $password) or die("Koneksi ke database gagal");

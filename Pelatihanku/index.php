@@ -13,49 +13,26 @@
 	<title> 
 	</title>
 </head>
-<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Diklatku</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tambah.php">Add New Data</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>	
-		
+<body>	
 		<h2>Daftar Pelatihan</h2>
 		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> <br></br>
 
-		<table cellpadding="10" cellspacing="0" border="1" id="myTable">
+		<table cellpadding="14" cellspacing="0" border="1" id="myTable">
 		<tr bgcolor="#CCCCCC">
 
 			<th>ID Pelatihan</th>
 			<th>Nama Pelatihan</th>
 			<th>ID Bidang</th>
-			<th>Tanggal Awal</tdh>
+			<th>Tanggal Awal</th>
 			<th>Tanggal Akhir</th>
+			<th>Ruangan</th>
 			<th>Lokasi</th>
-			<th>ID Klasifikasi</th>
 			<th>Klasifikasi</th>
 			<th>Vendor</th>
+			<th>Hari</th>
+			<th>Durasi</th>
+			<th>Sertifikasi</th>
+			<th>Jumlah Peserta</th>
 			<th></th>
 			
 		</tr>
@@ -63,8 +40,9 @@
 		//include file koneksi ke database
 		include ('../koneksi.php');
 
+		$id_pelatihan = $_GET['id'];
 			//query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
-			$query = mysqli_query($connect, "SELECT * FROM pelatihan ORDER BY ID_PELATIHAN ASC") or die (mysqli_error());
+			$query = mysqli_query($connect, "SELECT * FROM pelatihan ORDER BY ID_PELATIHAN ='$id_pelatihan'");
 
 			//cek, apakah hasil query di atas mendapatkan hasil atau tidak (data kosong)
 			if(mysqli_num_rows($query) == 0){ //ini artinya jika data hasil query di atas kosong
@@ -84,9 +62,14 @@
 					echo '<td>'.$data['ID_BIDANG'].'</td>';
 					echo '<td>'.$data['TANGGAL_AWAL'].'</td>';
 					echo '<td>'.$data['TANGGAL_AKHIR'].'</td>';
+					echo '<td>'.$data['RUANGAN'].'</td>';
 					echo '<td>'.$data['LOKASI'].'</td>';
 					echo '<td>'.$data['KLASIFIKASI'].'</td>';
 					echo '<td>'.$data['VENDOR'].'</td>';
+					echo '<td>'.$data['HARI'].'</td>';
+					echo '<td>'.$data['DURASI'].'</td>';
+					echo '<td>'.$data['SERTIFIKASI'].'</td>';
+					echo '<td>'.$data['JUMLAH_PESERTA'].'</td>';
 					echo '<td><a href="edit.php?id='.$data['ID_PELATIHAN'].'">Edit</a> / <a href="hapus.php?id='.$data['ID_PELATIHAN'].'"onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
 				echo '</tr>';
 

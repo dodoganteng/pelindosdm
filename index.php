@@ -34,7 +34,7 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='10' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>ID Pelatihan</th><th>NIPP</th><th>Bidang</th><th>Nama Pegawai</tdh><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Durasi</th><th>Edit / Hapus</th></tr>";
+              "<table cellpadding='10' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>ID Pelatihan</th><th>NIPP</th><th>Bidang</th><th>Nama Pegawai</tdh><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Durasi</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
@@ -74,7 +74,7 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='7' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>NIPP</th><th>Nama Pegawai</th><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Edit / Hapus</th></tr>";
+              "<table cellpadding='7' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>NIPP</th><th>Nama Pegawai</th><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
@@ -111,7 +111,7 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='11' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pelatihan</th><th>Nama Pelatihan</th><th>ID Bidang</th><th>Tanggal Awal</th><th>Tanggal Akhir</th><th>Lokasi</th><th>Klasifikasi</th><th>Vendor</th><th>Jumlah Peserta</th><th>Durasi</th><th>Edit / Hapus</th></tr>";
+              "<table cellpadding='11' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pelatihan</th><th>Nama Pelatihan</th><th>ID Bidang</th><th>Tanggal Awal</th><th>Tanggal Akhir</th><th>Lokasi</th><th>Klasifikasi</th><th>Vendor</th><th>Jumlah Peserta</th><th>Durasi</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
@@ -120,7 +120,7 @@
                   "</td><td>" + data[i].ID_BIDANG + "</td><td>" + data[i].TANGGAL_AWAL + "</td><td>" + data[i]
                   .TANGGAL_AKHIR + "</td><td>" + data[i].LOKASI + "</td><td>" + data[i].KLASIFIKASI +
                   "</td><td>" + data[i].VENDOR + "</td><td>" + data[i].JUMLAH_PESERTA + "</td><td>" + data[i].DURASI + "</td>";
-                  txt += '<td><a href="Pelatihanku/edit.php?id='+data[i].ID_PELATIHAN+'">Edit</a> / <a href="Pelatihanku/hapus.php?id='+data[i].ID_PELATIHAN+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
+                  txt += '<td><a href="Pelatihanku/index.php?idgit ='+data[i].ID_PELATIHAN+'">Details</a> / <a href="Pelatihanku/edit.php?id='+data[i].ID_PELATIHAN+'">Edit</a> / <a href="Pelatihanku/hapus.php?id='+data[i].ID_PELATIHAN+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
 
               }
               txt += "</table>"
@@ -149,7 +149,7 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='10' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pelatihan</th><th>Nama Pelatihan</th><th>ID Bidang</th><th>Tanggal Awal</th><th>Tanggal Akhir</th><th>Klasifikasi</th><th>Vendor</th><th>Jumlah Peserta</th><th>Durasi</th><th>Bidang</th></tr>";
+              "<table cellpadding='11' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pelatihan</th><th>Nama Pelatihan</th><th>ID Bidang</th><th>Tanggal Awal</th><th>Tanggal Akhir</th><th>Klasifikasi</th><th>Vendor</th><th>Jumlah Peserta</th><th>Durasi</th><th>Bidang</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
