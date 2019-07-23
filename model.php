@@ -106,7 +106,6 @@ if (isset($_POST["bidang"])) {
             echo json_encode($return_arr);
         }
         if ($_POST["menu"] == "Pegawaiku") {
-            $connect=mysqli_connect("localhost", "root", "", "rekapsdm");
             //query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
             $return_arr = array();
             $query = mysqli_query($connect, "SELECT * FROM pegawai ORDER BY ID_PEGAWAI ASC") or die(mysqli_error($connect));
