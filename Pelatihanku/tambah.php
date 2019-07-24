@@ -1,5 +1,9 @@
 <?php
 	include('../koneksi.php');
+	
+	
+	$show = mysqli_query($connect, "SELECT ID_PELATIHAN FROM pelatihan ORDER BY ID_PELATIHAN DESC");
+	$data = mysqli_fetch_assoc($show);
 	?>
 		<p> <a href="../index.php">Beranda</a> </p>
 		
@@ -10,7 +14,8 @@
 		<tr>
 			<td>ID Pelatihan</td>
 			<td>:</td>
-			<td><input type="text" name="id_pelatihan" required /> </td>
+			
+			<td><input type="text" name="id_pelatihan" required /> ID Pelatihan terakhir = <?php echo $data['ID_PELATIHAN'] ?> </td>
 		</tr>
 		<tr>
 			<td>Nama Pelatihan</td>
