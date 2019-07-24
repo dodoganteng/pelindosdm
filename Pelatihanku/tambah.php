@@ -86,7 +86,7 @@
 			<td>Sertifikasi</td>
 			<td>:</td>
 			<td>
-			<select name="sertifikasi" required/>
+			<select name="sertifikasi" required >
 					<option value="">Pilih Jenis Sertifikasi</option>
 					<option value="SERTIFIKASI">Sertifikasi</option>
 					<option value="TIDAK">Non-Sertifikasi</option>
@@ -99,7 +99,17 @@
 			<td>:</td>
 			<td> <input type="text" name="jumlah_peserta" required/> </td>
 		</tr>
-		
+
+		<tr>
+			<td>Managerial</td>
+			<td>:</td>
+			<td>
+			<select name="managerial" required >
+					<option value="">Managerial/Non-Managerial</option>
+					<option value="MANAGERIAL">Managerial</option>
+					<option value="TIDAK">Non-Managerial</option>
+				</select>  </td>
+		</tr>
 		<tr>
 			<td>&nbsp;</td>
 			<td></td>

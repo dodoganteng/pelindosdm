@@ -22,12 +22,7 @@
 
 	<form action="edit-proses.php" method="post">
 		<input type="hidden" name="id_pegawai" value="<?php echo $id; ?>">
-		<table cellpadding="9" cellspacing="0" border="1">
-		<tr>
-			<td>ID Pegawai</td>
-			<td>:</td>
-			<td><input type="text" name="id_pegawai" required placeholder=<?php echo $data['ID_PEGAWAI'] ?> /> </td>
-		</tr>
+		<table cellpadding="8" cellspacing="0" border="1">
 		<tr>
 			<td>ID Pelatihan</td>
 			<td>:</td>
@@ -56,27 +51,17 @@
 		<tr>
 			<td>Kelas Jabatan</td>
 			<td>:</td>
-			<td> <select name="kelas_jabatan" required placeholder=<?php echo $data['KELAS_JABATAN'] ?> >
-					<option value="">Pilih Kelas Jabatan</option>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
+			<td> <select name="kelas_jabatan" required>
+			<?php 
+			$kj = mysqli_query($connect,"SELECT KELAS_JABATAN FROM diklat");
+			for ($i=0; $i <19 ; $i++) { 
+				
+			
+			?>
+
+				<option value="<?php echo $i?>"><?php echo $i ?></option>
+					
+			<?php } ?>
 				</select>  
 			</td>
 		</tr>

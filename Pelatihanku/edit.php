@@ -102,7 +102,12 @@
 		<tr>
 			<td>Managerial</td>
 			<td>:</td>
-			<td> <input type="text" name="managerial" required placeholder=<?php echo $data['MANAGERIAL'] ?> /> </td>
+			<td>
+			<select name="managerial" required >
+					<option value="">Managerial/Non-Managerial</option>
+					<option value="MANAGERIAL">Managerial</option>
+					<option value="TIDAK">Non-Managerial</option>
+				</select>  </td>
 		</tr>
 
 		<tr>
