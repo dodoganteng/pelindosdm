@@ -32,7 +32,7 @@
 		<tr>
 			<td>Nama Pelatihan</td>
 			<td>:</td>
-			<td> <input type="text" name="nama_pelatihan" size="200"> required placeholder=<?php echo $data['NAMA_PELATIHAN'] ?> /> </td>
+			<td> <input type="text" name="nama_pelatihan" size="200" required placeholder=<?php echo $data['NAMA_PELATIHAN'] ?> /> </td>
 		</tr>
 		<tr>
 			<td>Bidang</td>
@@ -68,8 +68,43 @@
 		<tr>
 			<td>Vendor</td>
 			<td>:</td>
-			<td> <input type="text" name="vendor" required placeholder=<?php echo $data['VENDOR'] ?>> </td>
+			<td> <input type="text" name="vendor" required placeholder=<?php echo $data['VENDOR'] ?> /> </td>
 		</tr>
+		<tr>
+			<td>Jumlah Hari</td>
+			<td>:</td>
+			<td> <input type="text" name="hari" required placeholder=<?php echo $data['HARI'] ?> /> </td>
+		</tr>
+		
+		<tr>
+			<td>Durasi</td>
+			<td>:</td>
+			<td> <input type="text" name="durasi" required placeholder=<?php echo $data['DURASI'] ?> /> </td>
+		</tr>
+
+		<tr>
+			<td>Sertifikasi</td>
+			<td>:</td>
+			<td>
+			<select name="sertifikasi" required placeholder=<?php echo $data['SERTIFIKASI'] ?> >
+					<option value="">Pilih Jenis Sertifikasi</option>
+					<option value="SERTIFIKASI">Sertifikasi</option>
+					<option value="TIDAK">Non-Sertifikasi</option>
+				</select>  </td>
+		</tr>
+		
+		<tr>
+			<td>Jumlah Peserta</td>
+			<td>:</td>
+			<td> <input type="text" name="jumlah_peserta" required placeholder=<?php echo $data['JUMLAH_PESERTA'] ?> /> </td>
+		</tr>
+		
+		<tr>
+			<td>Managerial</td>
+			<td>:</td>
+			<td> <input type="text" name="managerial" required placeholder=<?php echo $data['MANAGERIAL'] ?> /> </td>
+		</tr>
+
 		<tr>
 			<td>&nbsp;</td>
 			<td></td>
