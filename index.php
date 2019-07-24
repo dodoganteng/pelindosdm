@@ -34,14 +34,14 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='10' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>ID Pelatihan</th><th>NIPP</th><th>Bidang</th><th>Nama Pegawai</tdh><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Durasi</th><th>Action</th></tr>";
+              "<table cellpadding='10' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>ID Pelatihan</th><th>NIPP</th><th>Bidang</th><th>Nama Pegawai</tdh><th>Lokasi Pegawai</th><th>Seksi / Sub</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Durasi</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
                 // var d=$.parseJSON(data[i])
                 txt += "<tr><td>" + data[i].ID_PEGAWAI + "</td><td>" + data[i].ID_PELATIHAN + "</td><td>" +
                   data[i].NIPP + "</td><td>" + data[i].BIDANG + "</td><td>" + data[i].NAMA_PEGAWAI +
-                  "</td><td>" + data[i].LOKASI_PEGAWAI + "</td><td>" + data[i].SUBSTANSI + "</td><td>" + data[
+                  "</td><td>" + data[i].LOKASI_PEGAWAI + "</td><td>" + data[i].SEKSI + "</td><td>" + data[
                     i].KELAS_JABATAN + "</td><td>" + data[i].JENIS_KELAMIN + "</td><td>" + data[i].DURASI +
                   "</td>";
                    txt += '<td><a href="Diklatku/edit.php?id='+data[i].ID_PEGAWAI+'">Edit</a> / <a href="Diklatku/hapus.php?id='+data[i].ID_PEGAWAI+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
@@ -74,13 +74,13 @@
             console.log(data[0])
             var len = data.length;
             var txt =
-              "<table cellpadding='7' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>NIPP</th><th>Nama Pegawai</th><th>Lokasi Pegawai</th><th>Substansi</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Action</th></tr>";
+              "<table cellpadding='7' cellspacing='0' border='1' id='myTable'><tr bgcolor='#CCCCCC'><th>ID Pegawai</th><th>NIPP</th><th>Nama Pegawai</th><th>Lokasi Pegawai</th><th>Seksi / Sub</th><th>Kelas Jabatan</th><th>Jenis Kelamin</th><th>Action</th></tr>";
             if (len > 0) {
               for (var i = 0; i < len; i++) {
                 console.log(data[i])
                 // var d=$.parseJSON(data[i])
                 txt += "<tr><td>" + data[i].ID_PEGAWAI + "</td><td>" + data[i].NIPP + "</td><td>" + data[i]
-                  .NAMA_PEGAWAI + "</td><td>" + data[i].LOKASI_PEGAWAI + "</td><td>" + data[i].SUBSTANSI +
+                  .NAMA_PEGAWAI + "</td><td>" + data[i].LOKASI_PEGAWAI + "</td><td>" + data[i].SEKSI +
                   "</td><td>" + data[i].KELAS_JABATAN + "</td><td>" + data[i].JENIS_KELAMIN + "</td>";
                   txt += '<td><a href="Pegawaiku/edit.php?id='+data[i].ID_PEGAWAI+'">Edit</a> / <a href="Pegawaiku/hapus.php?id='+data[i].ID_PEGAWAI+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
 

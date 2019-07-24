@@ -49,9 +49,9 @@
 			<td> <input type="text" name="lokasi_pegawai" size="20" required placeholder=<?php echo $data['LOKASI_PEGAWAI'] ?>/> </td>
 		</tr>
 		<tr>
-			<td>Substansi</td>
+			<td>Seksi / Sub</td>
 			<td>:</td>
-			<td> <input type="text" name="substansi" size="30" required placeholder=<?php echo $data['SUBSTANSI'] ?> /> </td>
+			<td> <input type="text" name="seksi" size="30" required placeholder=<?php echo $data['SEKSI'] ?> /> </td>
 		</tr>
 		<tr>
 			<td>Kelas Jabatan</td>

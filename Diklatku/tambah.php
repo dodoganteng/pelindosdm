@@ -61,9 +61,9 @@
 			<td> <input type="text" name="lokasi_pegawai" size="20" required/> </td>
 		</tr>
 		<tr>
-			<td>Substansi</td>
+			<td>Seksi / Sub</td>
 			<td>:</td>
-			<td> <input type="text" name="substansi" size="30" required/> </td>
+			<td> <input type="text" name="seksi" size="30" required/> </td>
 		</tr>
 		<tr>
 			<td>Kelas Jabatan</td>
