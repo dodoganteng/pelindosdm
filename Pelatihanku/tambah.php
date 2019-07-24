@@ -23,7 +23,7 @@
 			
 			<td> <select name="id_bidang" required>
 			<?php 
-			$bidang = mysqli_query($connect,"SELECT * FROM BIDANG");
+			$bidang = mysqli_query($connect,"SELECT * FROM bidang");
 			while($result = mysqli_fetch_assoc($bidang)){
 			?>
 
@@ -85,7 +85,12 @@
 		<tr>
 			<td>Sertifikasi</td>
 			<td>:</td>
-			<td> <input type="text" name="sertifikasi" required/> </td>
+			<td>
+			<select name="sertifikasi" required/>
+					<option value="">Pilih Jenis Sertifikasi</option>
+					<option value="SERTIFIKASI">Sertifikasi</option>
+					<option value="TIDAK">Non-Sertifikasi</option>
+				</select>  </td>
 		</tr>
 		
 

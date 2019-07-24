@@ -1,4 +1,6 @@
-		
+<?php
+	include('../koneksi.php');
+	?>
 		<p> <a href="../index.php">Beranda</a> </p>
 		
 		<h3>Tambah Data Diklat</h3>
@@ -13,33 +15,32 @@
 		<tr>
 			<td>ID Pelatihan</td>
 			<td>:</td>
-			<td> <input type="text" name="id_pelatihan" required/> </td>
+			<td> 
+			<select name="id_pelatihan" required>
+			<?php 
+			$diklat = mysqli_query($connect,"SELECT ID_PELATIHAN FROM pelatihan");
+			while($result = mysqli_fetch_assoc($diklat)) { 
+				
+			
+			?>
+
+				<option value="<?php echo $result["ID_PELATIHAN"]?>"><?php echo $result["ID_PELATIHAN"] ?></option>
+					
+			<?php } ?>
+				</select>   </td>
 		</tr>
 		<tr>
 			<td>Bidang</td>
 			<td>:</td>
 			<td> <select name="bidang" required>
-					<option value="">Pilih Bidang</option>
-					<option value="TIDAK ADA">BELUM MENGIKUTI</option>
-					<option value="SDM">SDM</option>
-					<option value="HSSE">HSSE</option>
-					<option value="BIRO PERENCANAAN">BIRO PERENCANAAN</option>
-					<option value="CHANGE MANAGEMENT">CHANGE MANAGEMENT</option>
-					<option value="OPERASIONAL">OPERASIONAL</option>
-					<option value="HUMAS">HUMAS</option>
-					<option value="PJUM">PJUM</option>
-					<option value="HCM">HCM</option>
-					<option value="FI">FI</option>
-					<option value="CO">CO</option>
-					<option value="PBJ">PBJ</option>
-					<option value="SPPI">SPPI</option>
-					<option value="SPI">SPI</option>
-					<option value="PM">PM</option>
-					<option value="MARKETING">MARKETING</option>
-					<option value="KEUANGAN">KEUANGAN</option>
-					<option value="SMMR">SMMR</option>
-					<option value="HUKUM / LEGAL">HUKUM / LEGAL</option>
-					<option value="TEKNIK">TEKNIK</option>
+			<?php 
+			$bidang = mysqli_query($connect,"SELECT * FROM bidang");
+			while($result = mysqli_fetch_assoc($bidang)){
+			?>
+
+				<option value="<?php echo $result["BIDANG"]?>"><?php echo $result["BIDANG"] ?></option>
+					
+					<?php } ?>
 				</select>  
 			</td>
 		</tr>
@@ -68,26 +69,16 @@
 			<td>Kelas Jabatan</td>
 			<td>:</td>
 			<td> <select name="kelas_jabatan" required>
-					<option value="">Pilih Kelas Jabatan</option>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
+			<?php 
+			$kj = mysqli_query($connect,"SELECT KELAS_JABATAN FROM diklat");
+			for ($i=0; $i <19 ; $i++) { 
+				
+			
+			?>
+
+				<option value="<?php echo $i?>"><?php echo $i ?></option>
+					
+			<?php } ?>
 				</select>  
 			</td>
 		</tr>
