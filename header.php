@@ -36,11 +36,11 @@
     <a id="pegawaipelindo" class="btn btn-primary btn-lg active" tabindex="-1" role="button" aria-disabled="true">Daftar
       Pegawai</a>
 
-    <a id="pelatihanpelindo" class="btn btn-primary btn-lg active" tabindex="-1" role="button"
-      aria-disabled="true">Daftar Pelatihan</a>
-
     <a id="diklatpelindo" class="btn btn-primary btn-lg active" tabindex="-1" role="button" aria-disabled="true">Data
       Diklat</a>
+
+    <a id="pelatihanpelindo" class="btn btn-primary btn-lg active" tabindex="-1" role="button"
+      aria-disabled="true">Daftar Pelatihan</a>
 
     <div class="btn-group" role="button">
       <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
