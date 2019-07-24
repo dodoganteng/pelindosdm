@@ -17,7 +17,7 @@
 		<h2>Daftar Pelatihan</h2>
 		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> <br></br>
 
-		<table cellpadding="14" cellspacing="0" border="1" id="myTable">
+		<table cellpadding="15" cellspacing="0" border="1" id="myTable">
 		<tr bgcolor="#CCCCCC">
 
 			<th>ID Pelatihan</th>
@@ -33,6 +33,8 @@
 			<th>Durasi</th>
 			<th>Sertifikasi</th>
 			<th>Jumlah Peserta</th>
+			<th>Managerial</th>
+			<th>Action</th>
 			<th></th>
 			
 		</tr>
@@ -70,6 +72,7 @@
 					echo '<td>'.$data['DURASI'].'</td>';
 					echo '<td>'.$data['SERTIFIKASI'].'</td>';
 					echo '<td>'.$data['JUMLAH_PESERTA'].'</td>';
+					echo '<td>'.$data['MANAGERIAL'].'</td>';
 					echo '<td><a href="edit.php?id='.$data['ID_PELATIHAN'].'">Edit</a> / <a href="hapus.php?id='.$data['ID_PELATIHAN'].'"onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
 				echo '</tr>';
 

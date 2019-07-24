@@ -13,12 +13,18 @@ if (isset($_POST['Ubah'])) {
 	$id_bidang		= $_POST['id_bidang'];
 	$tanggal_awal	= $_POST['tanggal_awal'];
 	$tanggal_akhir	= $_POST['tanggal_akhir'];
+	$ruangan		= $_POST['ruangan'];
 	$lokasi			= $_POST['lokasi'];
 	$klasifikasi	= $_POST['klasifikasi'];
 	$vendor			= $_POST['vendor'];
+	$hari			= $_POST['hari'];
+	$durasi			= $_POST['durasi'];
+	$sertifikasi	= $_POST['sertifikasi'];
+	$jumlah_peserta = $_POST['jumlah_peserta'];
+	$managerial		= $_POST['managerial'];
 	
 	//melakukan query dengan perintah UPDATE untuk memasukkan data ke database
-	$input	= mysqli_query($connect, "UPDATE pelatihan SET id_pelatihan= '$id_pelatihan', nipp = '$nipp', nama_pelatihan = '$nama_pelatihan', id_bidang = '$id_bidang',tanggal_awal = '$tanggal_awal', tanggal_akhir = '$tanggal_akhir', lokasi = '$lokasi', klasifikasi = '$klasifikasi', vendor ='$vendor' WHERE  id_pelatihan = '$id_pelatihan'") or die (mysqli_error($conect));
+	$input	= mysqli_query($connect, "UPDATE pelatihan SET id_pelatihan= '$id_pelatihan', nipp = '$nipp', nama_pelatihan = '$nama_pelatihan', id_bidang = '$id_bidang',tanggal_awal = '$tanggal_awal', tanggal_akhir = '$tanggal_akhir', lokasi = '$lokasi', klasifikasi = '$klasifikasi', vendor ='$vendor', hari ='$hari', durasi ='$durasi',sertifikasi ='$sertifikasi', jumlah_peserta ='$jumlah_peserta', managerial ='$managerial' WHERE  id_pelatihan = '$id_pelatihan'") or die (mysqli_error($conect));
 	var_dump ($input);
 	//jika query input sukses
 	if ($input) {

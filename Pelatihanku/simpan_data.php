@@ -21,9 +21,10 @@ if (isset($_POST['tambah'])) {
 	$durasi			= $_POST['durasi'];
 	$sertifikasi	= $_POST['sertifikasi'];
 	$jumlah_peserta = $_POST['jumlah_peserta'];
+	$managerial		= $_POST['managerial'];
 
 	//melakukan query dengan perintah INSERT INTO untuk memasukkan data ke database
-	$input	= mysqli_query($connect, "INSERT INTO pelatihan (ID_PELATIHAN,NAMA_PELATIHAN,ID_BIDANG,TANGGAL_AWAL,TANGGAL_AKHIR,RUANGAN,LOKASI,KLASIFIKASI,VENDOR,HARI,DURASI,SERTIFIKASI,JUMLAH_PESERTA) VALUES('$id_pelatihan','$nama_pelatihan','$id_bidang','$tanggal_awal','$tanggal_akhir','$ruangan','$lokasi','$klasifikasi','$vendor','$hari','$durasi','$sertifikasi','$jumlah_peserta')") or die (mysqli_error($connect));
+	$input	= mysqli_query($connect, "INSERT INTO pelatihan (ID_PELATIHAN,NAMA_PELATIHAN,ID_BIDANG,TANGGAL_AWAL,TANGGAL_AKHIR,RUANGAN,LOKASI,KLASIFIKASI,VENDOR,HARI,DURASI,SERTIFIKASI,JUMLAH_PESERTA,MANAGERIAL) VALUES('$id_pelatihan','$nama_pelatihan','$id_bidang','$tanggal_awal','$tanggal_akhir','$ruangan','$lokasi','$klasifikasi','$vendor','$hari','$durasi','$sertifikasi','$jumlah_peserta','$managerial')") or die (mysqli_error($connect));
 	var_dump($input);
 	//jika query input sukses
 	if ($input) {
