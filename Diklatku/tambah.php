@@ -18,7 +18,7 @@
 			<td> 
 			<select name="id_pelatihan" required>
 			<?php 
-			$diklat = mysqli_query($connect,"SELECT ID_PELATIHAN FROM pelatihan");
+			$diklat = mysqli_query($connect,"SELECT ID_PELATIHAN FROM pelatihan ORDER BY ID_PELATIHAN");
 			while($result = mysqli_fetch_assoc($diklat)) { 
 				
 			
