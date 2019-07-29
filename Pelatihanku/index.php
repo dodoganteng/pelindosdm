@@ -37,45 +37,49 @@
 			
 		</tr>
 		<?php
-		//include file koneksi ke database
-		include ('../koneksi.php');
+        //include file koneksi ke database
+        include('../koneksi.php');
 
-		$id_pelatihan = $_GET['id'];
-			//query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
-			$query = mysqli_query($connect, "SELECT * FROM pelatihan ORDER BY ID_PELATIHAN ='$id_pelatihan'");
+        if (isset($_GET["id"])) {
+            $id_pelatihan = $_GET["id"];
+        
+            //query ke database dengan SELECT table Pegawai diurutkan berdasarkan ID_Pegawai Paling Kecil
+            $query = mysqli_query($connect, "SELECT * FROM pelatihan WHERE ID_PELATIHAN = $id_pelatihan");
+        }else{
+            $query = mysqli_query($connect, "SELECT * FROM pelatihan ORDER BY ID_PELATIHAN");
+		}
+            //cek, apakah hasil query di atas mendapatkan hasil atau tidak (data kosong)
+            if (mysqli_num_rows($query) == 0) { //ini artinya jika data hasil query di atas kosong
 
-			//cek, apakah hasil query di atas mendapatkan hasil atau tidak (data kosong)
-			if(mysqli_num_rows($query) == 0){ //ini artinya jika data hasil query di atas kosong
+            //jika data kosong, maka akan menampilkan row kosong
+                echo '<tr><td colspan="6"> Tidak ada data!</td></tr>';
+            } else {	//else ini artinya jika data hasi query ada (data di database tidak kosong)
 
-			//jika data kosong, maka akan menampilkan row kosong
-			echo '<tr><td colspan="6"> Tidak ada data!</td></tr>';
-			} else {	//else ini artinya jika data hasi query ada (data di database tidak kosong)
+                //jika data tidak kosong, maka akan melakukan perulangan while
+            $no = 1;	//membuat variabel $no untuk membuat no urut
+            while ($data = mysqli_fetch_assoc($query)) {	//perulangan while dengan membuat variabel $data yang akan mengambil data di database
 
-			//jika data tidak kosong, maka akan melakukan perulangan while
-			$no = 1;	//membuat variabel $no untuk membuat no urut
-			while($data = mysqli_fetch_assoc($query)) {	//perulangan while dengan membuat variabel $data yang akan mengambil data di database
-
-				//menampilkan row dengan data di database
-				echo '<tr>';
-					echo '<td>'.$data['ID_PELATIHAN'].'</td>';
-					echo '<td>'.$data['NAMA_PELATIHAN'].'</td>';
-					echo '<td>'.$data['ID_BIDANG'].'</td>';
-					echo '<td>'.$data['TANGGAL_AWAL'].'</td>';
-					echo '<td>'.$data['TANGGAL_AKHIR'].'</td>';
-					echo '<td>'.$data['RUANGAN'].'</td>';
-					echo '<td>'.$data['LOKASI'].'</td>';
-					echo '<td>'.$data['KLASIFIKASI'].'</td>';
-					echo '<td>'.$data['VENDOR'].'</td>';
-					echo '<td>'.$data['HARI'].'</td>';
-					echo '<td>'.$data['DURASI'].'</td>';
-					echo '<td>'.$data['SERTIFIKASI'].'</td>';
-					echo '<td>'.$data['JUMLAH_PESERTA'].'</td>';
-					echo '<td><a href="edit.php?id='.$data['ID_PELATIHAN'].'">Edit</a> / <a href="hapus.php?id='.$data['ID_PELATIHAN'].'"onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
-				echo '</tr>';
-
-				}	
-			}
-		?> 
+                //menampilkan row dengan data di database
+                echo '<tr>';
+                echo '<td>'.$data['ID_PELATIHAN'].'</td>';
+                echo '<td>'.$data['NAMA_PELATIHAN'].'</td>';
+                echo '<td>'.$data['ID_BIDANG'].'</td>';
+                echo '<td>'.$data['TANGGAL_AWAL'].'</td>';
+                echo '<td>'.$data['TANGGAL_AKHIR'].'</td>';
+                echo '<td>'.$data['RUANGAN'].'</td>';
+                echo '<td>'.$data['LOKASI'].'</td>';
+                echo '<td>'.$data['KLASIFIKASI'].'</td>';
+                echo '<td>'.$data['VENDOR'].'</td>';
+                echo '<td>'.$data['HARI'].'</td>';
+                echo '<td>'.$data['DURASI'].'</td>';
+                echo '<td>'.$data['SERTIFIKASI'].'</td>';
+                echo '<td>'.$data['JUMLAH_PESERTA'].'</td>';
+                echo '<td><a href="edit.php?id='.$data['ID_PELATIHAN'].'">Edit</a> / <a href="hapus.php?id='.$data['ID_PELATIHAN'].'"onclick="return confirm(\'Yakin?\')">Hapus</a></td>';
+                echo '</tr>';
+            }
+            }
+        
+        ?> 
 	</table>
 	<script>
 function myFunction() {

@@ -120,7 +120,7 @@
                   "</td><td>" + data[i].ID_BIDANG + "</td><td>" + data[i].TANGGAL_AWAL + "</td><td>" + data[i]
                   .TANGGAL_AKHIR + "</td><td>" + data[i].LOKASI + "</td><td>" + data[i].KLASIFIKASI +
                   "</td><td>" + data[i].VENDOR + "</td><td>" + data[i].JUMLAH_PESERTA + "</td><td>" + data[i].DURASI + "</td>";
-                  txt += '<td><a href="Pelatihanku/index.php?idgit ='+data[i].ID_PELATIHAN+'">Details</a> / <a href="Pelatihanku/edit.php?id='+data[i].ID_PELATIHAN+'">Edit</a> / <a href="Pelatihanku/hapus.php?id='+data[i].ID_PELATIHAN+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
+                  txt += '<td><a href="Pelatihanku/index.php?id='+data[i].ID_PELATIHAN+'">Details</a> / <a href="Pelatihanku/edit.php?id='+data[i].ID_PELATIHAN+'">Edit</a> / <a href="Pelatihanku/hapus.php?id='+data[i].ID_PELATIHAN+'"onclick="return confirm(\'Yakin?\')">Hapus</a></td></tr>';
 
               }
               txt += "</table>"
