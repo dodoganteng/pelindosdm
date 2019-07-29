@@ -14,12 +14,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">
-      <h2>Diklatku</h2>
+      <h2 class="col-12">Diklatku</h2>
     </a>
   </nav>
-  <br></br>
+<br></br>
 <div class="col-12">
     <a id="pegawaipelindo" class="btn btn-primary btn-lg active" tabindex="-1" role="button" aria-disabled="true">Daftar
       Pegawai</a>
@@ -36,7 +36,6 @@
         Bidang
       </button>
       <div class="dropdown-menu">
-
         <a id="klikBELUM" class="dropdown-item">BELUM MENGIKUTI</a>
         <a id="klikSDM" class="dropdown-item">SDM</a>
         <a id="klikHSSE" class="dropdown-item">HSSE</a>
