@@ -13,7 +13,12 @@
 	<title> 
 	</title>
 </head>
-<body>	
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="../index.php">
+      <h2 class="col-12">Diklatku</h2>
+    </a>
+  </nav>	
 		<h2>Daftar Pelatihan</h2>
 		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> <br></br>
 
